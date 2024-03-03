@@ -12,3 +12,4 @@ On commence par changer de branche, on passe de master à color_support.
 On choisit de merge une branche avec color_support et on sélectionne la branche master.
 On nous indique qu'il y a des conflits dans le Makefile et dans mandel.c.
 On les gère dans VSCode et on arrive à la version que nous souhaitions.
+On retourne dans la branche master et on merge les branches sans conflits.

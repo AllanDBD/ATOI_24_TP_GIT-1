@@ -65,7 +65,7 @@ double cy(int y) {
 
 int main(int argc, char *argv[]) {
   struct ppm_image im;
-  ppm_image_init(&amp; im, SIZEX, SIZEY);
+  ppm_image_init(&im, SIZEX, SIZEY);
 
   int i, j;
   int colref = log(ITER);
@@ -82,7 +82,7 @@ for (i = 0; i < SIZEX; ++i) {
             {
                 double mod = cabs(z);
  
-                if( TRSH &lt; mod )
+                if( TRSH < mod )
                 {
                     break;
                 }
@@ -97,8 +97,8 @@ for (i = 0; i < SIZEX; ++i) {
         }
     }
 
-  ppm_image_dump(&amp; im, "m.ppm");
-  ppm_image_release(&amp; im);
+  ppm_image_dump(&im, "m.ppm");
+  ppm_image_release(&im);
 
   return 0;
 }

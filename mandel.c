@@ -16,7 +16,7 @@ struct col
     int b;
 };
  
-struct col getcol( int val , int max )
+struct col getcol( int val , int max )  //Créer une couleur grâce aux coefficients de c.r, c.g, c.b qui correspondent à un mélange de rouge, de vert et de bleu
 {
     double q = (double)val/(double)max;
  
@@ -65,13 +65,13 @@ double cy(int y) {
 
 int main(int argc, char *argv[]) {
   struct ppm_image im;
-  ppm_image_init(&im, SIZEX, SIZEY);
+  ppm_image_init(&im, SIZEX, SIZEY);        //Création d'une image de taille SIZEX x SIZEY
 
   int i, j;
   int colref = log(ITER);
 
-for (i = 0; i < SIZEX; ++i) {
-        for (j = 0; j < SIZEY; ++j) {
+for (i = 0; i < SIZEX; ++i) {              //Initialisation de la boucle utile horizontalement dans l'image
+        for (j = 0; j < SIZEY; ++j) {      //Initialisation de la boucle utile verticalement dans l'image
  
             unsigned long int iter = 0;
  
@@ -92,13 +92,13 @@ for (i = 0; i < SIZEX; ++i) {
                 iter++;
             }
  
-            struct col cc = getcol( log(iter), colref );
-            ppm_image_setpixel(&im, i,j, cc.r, cc.g , cc.b );
+            struct col cc = getcol( log(iter), colref );        //Création de la couleur
+            ppm_image_setpixel(&im, i,j, cc.r, cc.g , cc.b );  //Modification du pixel de coordonnées i,j avec la couleur cc
         }
     }
 
-  ppm_image_dump(&im, "m.ppm");
-  ppm_image_release(&im);
+  ppm_image_dump(&im, "m.ppm");     //Nomme l'image créée précédemment m.ppm
+  ppm_image_release(&im);           //Libération de l'espace mémoire utilisé par im
 
   return 0;
 }

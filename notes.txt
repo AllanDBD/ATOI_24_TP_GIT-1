@@ -1,2 +1,14 @@
 Exercice 1:
+2) Voir mermaid.png
 3) Le header ppm.h sert à itinialiser les structures et les prototypes utiles à ppm.c.
+
+Exercice 2:
+1) Commit Correction mandel.c + Makefile
+2) Voir commentaires dans mandel.c
+
+Exercice 3:
+Pour faire cela il faut merge la branche master dans la branche color_support.
+On commence par changer de branche, on passe de master à color_support.
+On choisit de merge une branche avec color_support et on sélectionne la branche master.
+On nous indique qu'il y a des conflits dans le Makefile et dans mandel.c.
+On les gère dans VSCode et on arrive à la version que nous souhaitions.

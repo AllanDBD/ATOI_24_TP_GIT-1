@@ -13,3 +13,7 @@ On choisit de merge une branche avec color_support et on sélectionne la branche
 On nous indique qu'il y a des conflits dans le Makefile et dans mandel.c.
 On les gère dans VSCode et on arrive à la version que nous souhaitions.
 On retourne dans la branche master et on merge les branches sans conflits.
+
+Exercice 4:
+Je fais un fork pour ensuite faire un push de tous mes commits.
+Je peux ensuite envoyer un lien au professeur pour qu'il ait accès à mon repository.
